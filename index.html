@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title displayed on the browser tab -->
+    <title>TaskNest | Smart To-Do Manager</title>
+
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER START ================= -->
+
+    <header class="header">
+
+        <!-- Logo and Title Section -->
+        <div class="logo-section">
+
+            <h1 id="app-title">
+                TaskNest
+            </h1>
+
+            <p class="subtitle">
+                Stay organized and manage your daily tasks efficiently.
+            </p>
+
+        </div>
+
+        <!-- Dark Mode Button -->
+        <button id="theme-toggle" type="button">
+            🌙 Dark Mode
+        </button>
+
+    </header>
+
+    <!-- ================= HEADER END ================= -->
+     <main>
+
+    <!-- ================= Dashboard ================= -->
+
+    <section class="dashboard">
+
+        <div class="dashboard-card">
+
+            <h3>Total Tasks</h3>
+
+            <p id="total-tasks">0</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Pending</h3>
+
+            <p id="pending-tasks">0</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <h3>Completed</h3>
+
+            <p id="completed-tasks">0</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+    <h3>Progress</h3>
+
+    <p id="progress">0%</p>
+
+    <div class="progress-bar">
+
+        <div class="progress-fill" id="progress-fill"></div>
+
+    </div>
+
+</div>
+
+    </section>
+    <!-- ================= Task Form ================= -->
+
+<section class="task-form-section">
+
+    <h2>Add New Task</h2>
+
+    <form id="task-form">
+
+        <div class="form-group">
+
+            <label for="task-name">
+
+                Task Name
+
+            </label>
+
+            <input
+                type="text"
+                id="task-name"
+                placeholder="Enter your task"
+                required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="priority">
+
+                Priority
+
+            </label>
+
+            <select id="priority">
+
+                <option value="High">High</option>
+
+                <option value="Medium">Medium</option>
+
+                <option value="Low">Low</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="due-date">
+
+                Due Date
+
+            </label>
+
+            <input
+                type="date"
+                id="due-date">
+
+        </div>
+
+        <button
+            type="submit"
+            id="add-task-btn">
+
+            + Add Task
+
+        </button>
+        <p id="error-message"
+           aria-live="polite">
+        </p>
+
+    </form>
+
+</section>
+
+<!-- ================= Controls ================= -->
+
+<section class="controls">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search tasks...">
+
+    <label for="status-filter" class="visually-hidden">
+    Filter by Status
+</label>    
+    <select id="status-filter">
+
+    <option value="all">All Tasks</option>
+    <option value="active">Pending</option>
+    <option value="completed">Completed</option>
+
+</select>
+
+<label for="priority-filter" class="visually-hidden">
+    Filter by Priority
+</label>
+<select id="priority-filter">
+
+    <option value="all">All Priorities</option>
+    <option value="High">High Priority</option>
+    <option value="Medium">Medium Priority</option>
+    <option value="Low">Low Priority</option>
+
+</select>
+<label for="sort-task" class="visually-hidden">
+    Sort Tasks
+</label>
+    <select id="sort-task">
+
+        <option value="newest">Newest First</option>
+
+        <option value="oldest">Oldest First</option>
+
+        <option value="alphabetical">Alphabetical</option>
+
+        <option value="duedate">Due Date</option>
+
+    </select>
+
+</section>
+<!-- ================= Task List ================= -->
+
+<section class="task-list-section">
+
+    <h2>Your Tasks</h2>
+
+    <div id="task-container">
+
+        <div class="empty-state">
+
+            <h3>No Tasks Yet</h3>
+
+            <p>Add your first task to get started.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+<footer>
+
+    <p>
+
+        © 2026 TaskNest | Built using HTML, CSS & JavaScript
+
+    </p>
+
+</footer>
+<div id="toast"></div>
+<script src="js/script.js"></script>
+
+
+
+</body>
+
+</html>

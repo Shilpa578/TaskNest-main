@@ -8,7 +8,7 @@ Manage your daily tasks with ease using features like search, filters, sorting, 
 
 ## 🌐 Live Demo
 
-https://Shilpa578.github.io/TaskNest/
+https://raidiv3608.github.io/TaskNest/
 
 
 ---
